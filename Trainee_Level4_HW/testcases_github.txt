@@ -1,0 +1,45 @@
+Testcase #1
+Go to https://github.com/
+Move to element “ Status”
+Click “Status” Button
+Click “Twitter” Button
+Click “Войти” Button
+Clear “Phone number, email address, or username” input
+Click “Further” Button
+Expected result “Мы не смогли найти вашу учетную запись.” was displayed.
+User stays on the same page.
+
+Testcase #2
+Go to https://github.com/
+Move to element “ Contact GitHub”
+Click “Contact GitHub” Button
+Input “iнформацiйнi системи” in placeholder “Find anything in the GitHub universe”
+Press “Enter”
+Expected result “No results found.” was displayed.
+User stays on the same page.
+ 
+Testcase #4
+Go to https://github.com/
+Input “Textcase4” in “Email address” Button
+Press “Ctrl A” (select the entered text)
+Press “Ctrl C” (copy the entered text)
+Open new window and go to the page (https://www.google.com/)
+Press “Ctrl V” in “Search” Button
+Press “Enter”
+Save Screenshot of the page
+Expected result: saved screenshot.
+User stays on the same page.
+
+Testcase #5
+
+Go to https://github.com/
+Change Size of the Page (smaller than first size)
+Change Size of the Page (bigger than previous size)
+Input “Textcase5” in “Search GitHub” Button
+Press “Ctrl A”
+Press “Delete”
+Press “Enter”
+Expected result “ProTip! For an advanced search, use some of our prefixes.” was displayed.
+User stays on the same page.
+
+
