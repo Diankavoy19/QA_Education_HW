@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 describe('v5.webdriver.io page', () => {
-    xit('Homework2', async () => {
+    it('Homework2', async () => {
         await browser.url('https://v5.webdriver.io/docs/api.html');
         const Attribute = await $('//*[text()="JSONWire protocol"]')
         await browser.newWindow(await Attribute.getAttribute('href'));
@@ -41,7 +41,7 @@ describe('v5.webdriver.io page', () => {
         await browser.pause(2000);
         console.log("isDisplayedInViewport?:" + isDisplayedInViewport);
     })
-    xit('Homework2: last task', async () => {
+    it('Homework2: last task', async () => {
         await browser.url('https://v5.webdriver.io/docs/api.html');
         const input = await $('[href="/help.html"]');
         console.log("help.isFocused() before click:" + await input.isFocused());
