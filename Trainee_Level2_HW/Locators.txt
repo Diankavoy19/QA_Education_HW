@@ -1,0 +1,203 @@
+Locators
+Task 1
+
+Introduction 
+
+//h3[contains(text(),'Introduction') ]
+//h3[text()="Introduction"]
+//h3[contains(text(),'Introduction') and @class]
+
+API Docs
+
+//a[text()="API Docs"]
+//a[contains(text(),'API Docs')]
+//a[contains(text(),'API Docs') and @class]
+
+Protocols
+
+//h3[text()="Protocols"]
+//h3[contains(text(),'Protocols')]
+//h3[contains(text(),'Protocols') and @class]
+
+Webdriver Protocol
+
+//a[text()="Webdriver Protocol"]
+//a[contains(text(),'Webdriver Protocol') ]
+//a[contains(text(),'Webdriver Protocol') and @class ]
+li a[href*="webdriver.html"] 
+//a[contains(text(),'JSON Wire Protocol') and @href and @class ]/../..//a
+//a[contains(text(),'Mobile JSON Wire Protocol') and @href and @class ]/../..//a
+
+Appium
+
+li a[href*="appium.html"]
+//li//a[text()="Appium"]
+[href="/docs/api/appium.html"]
+a[href="/docs/api/appium.html"]
+li a[href="/docs/api/appium.html"]
+//*[contains(text(),'Appium') and @href and @class]
+//a[contains(text(),'Appium') and @href and @class ]
+
+JSON Wire Protocol
+
+//a[text()="JSON Wire Protocol"]
+li a[href="/docs/api/jsonwp.html"]
+
+Mobile JSON Wire Protocol
+
+//a[text()="Mobile JSON Wire Protocol"]
+[href="/docs/api/mjsonwp.html"]
+a[href="/docs/api/mjsonwp.html"]
+li a[href="/docs/api/mjsonwp.html"]
+
+Chromium
+
+//a[text()="Chromium"] 
+li a[href="/docs/api/chromium.html"] 
+//*[contains(text(),"Chromium")]
+//a[contains(text(),"Chromium")]
+//a[contains(text(),"Chromium") and @href and @class]
+
+Sauce Labs
+
+//a[text()="Sauce Labs"]
+[href="/docs/api/saucelabs.html"]
+a[href="/docs/api/saucelabs.html"]
+li a[href="/docs/api/saucelabs.html"]
+a[href*="saucelabs.html"]
+//a[contains(text(),"Sauce Labs") ]
+//a[contains(text(),"Sauce Labs") and @href and @class]
+
+Selenium Standalone
+
+//a[contains(text(),"Selenium Standalone") ]
+//a[text()="Selenium Standalone"]
+//a[contains(text(),"Selenium Standalone") and @class and @href]
+[href="/docs/api/selenium.html"]
+a[href="/docs/api/selenium.html"]
+li a[href="/docs/api/selenium.html"]
+a[href*="selenium.html"]
+
+Appium
+
+p a[href*="appium"]
+a[href="http://appium.io"]
+p a[href="http://appium.io"]
+[href="http://appium.io"]
+//p//a[text()="Appium"]
+//p//a[contains(text(),"Appium") ]
+
+v4.webdriver.io
+
+p a[href*="v4.webdriver.io"]
+a[href*="v4.webdriver.io"]
+[href*="v4.webdriver.io"]
+[href="http://v4.webdriver.io"]
+//a[text()="v4.webdriver.io"]
+//a[contains(text(),"v4.webdriver.io")]
+//a[contains(text(),"v4.webdriver.io") and @href]
+
+Guide
+
+li a[href="/docs/gettingstarted.html"]
+li a[href*="gettingstarted.html"]
+//a[text()="Guide"]
+//a[contains(text(),"Guide")]
+//a[contains(text(),"Guide") and @href and @target]
+//a[contains(text(),"Guide") and @href or @targe]
+
+Help
+
+//a[contains(text(),"Help") and @href and @target]
+//li//a[contains(text(),"Help")]
+//li//a[text()="Help"]
+li a[href="/help.html"]
+li a[href*="help.html"]
+
+Blog
+
+a[href="/blog/"]
+li a[href="/blog/"]
+li a[href*="/blog/"]
+//li//a[text()="Blog"]
+//li//a[contains(text(),"Blog")]
+//a[contains(text(),"Blog") and @target and @href]
+
+Edit
+
+[href="https://github.com/webdriverio/webdriverio/edit/master/docs/API.md"]
+a[href="https://github.com/webdriverio/webdriverio/edit/master/docs/API.md"]
+a[href*="API.md"]
+//a[text()="Edit"]
+//a[contains(text(),"Edit")]
+//a[contains(text(),"Edit") and @class and @href and @target and @rel]
+//h1[contains(text(),"API Docs")]/..//a
+
+Contribute
+
+li a[href="#contribute"]
+//a[text()="Contribute"]
+//li//a[text()="Contribute"]
+li a[href*="contribute"]
+//a[contains(text(),"Contribute")]
+//a[contains(text(),"Contribute") and @class]
+
+Text after Examples
+
+//p[contains(text(),"Each command documentation usually comes with an example that demonstrates its usage in WebdriverIO's testrunner (in sync mode).")]
+//p[text()="Each command documentation usually comes with an example that demonstrates its usage in WebdriverIO's testrunner (in sync mode)."]
+
+Task 2
+
+Docs
+
+//h5[contains(text(),"Docs")]
+
+Getting Started
+
+//a[contains(text(),"Getting Started")]
+//a[contains(text(),"Getting Started") and @href or @hre]
+
+API Reference
+
+//a[contains(text(),"API Reference") and @href or @hre]
+//a[contains(text(),"API Reference")]
+
+Help
+
+//section //div//a[contains(text(),"Help") and @href ]
+
+Community
+
+//h5[contains(text(),"Community")]
+
+Stack Overflow
+
+//a[contains(text(),"Stack Overflow")]
+//a[contains(text(),"Stack Overflow") and @href or @targe and @rel]
+
+Support Chat
+
+//a[contains(text(),"Support Chat")]
+//a[contains(text(),"Support Chat") and @href or @targe or @re and @rel]
+
+Twitter
+
+//a[contains(text(),"Twitter")]
+//a[contains(text(),"Twitter") and @href and @target="_blank" or @re]
+
+More
+
+//h5[contains(text(),"More")]
+
+Blog
+
+//section//div//a[contains(text(),"Blog")]
+//section//div//a[contains(text(),"Blog") and @href]
+
+GitHub
+
+//section//div//a[contains(text(),"GitHub")]
+//section//div//a[contains(text(),"GitHub") and @href]
+
+
