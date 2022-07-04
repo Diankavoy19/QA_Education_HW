@@ -1,0 +1,73 @@
+Docs
+xpath
+//h5[contains(text(),"Docs")]
+//footer//div//h5[contains(text(),'Docs')]
+css
+footer section div:nth-child(2) h5:nth-child(1) 
+
+Getting Started
+xpath
+//a[contains(text(),"Getting Started")]
+//a[contains(text(),"Getting Started") and @href or @hre]
+css
+footer section div:nth-child(2) a:nth-child(2) 
+
+API Reference
+xpath
+//a[contains(text(),"API Reference") and @href or @hre]
+//a[contains(text(),"API Reference")]
+css
+footer section div:nth-child(2) a:nth-child(3) 
+
+Help
+xpath
+//section //div//a[contains(text(),"Help") and @href ]
+css
+footer section div:nth-child(2) a:nth-child(4) 
+
+Community
+xpath
+//h5[contains(text(),"Community")]
+css
+footer section div:nth-child(3) h5:nth-child(1) 
+
+Stack Overflow
+xpath
+//a[contains(text(),"Stack Overflow")]
+//a[contains(text(),"Stack Overflow") and @href or @targe and @rel]
+css
+footer section div:nth-child(3) a:nth-child(2) 
+
+Support Chat
+xpath
+//a[contains(text(),"Support Chat")]
+//a[contains(text(),"Support Chat") and @href or @targe or @re and @rel]
+css
+footer section div:nth-child(3) a:nth-child(3) 
+
+Twitter
+xpath
+//a[contains(text(),"Twitter")]
+//a[contains(text(),"Twitter") and @href and @target="_blank" or @re]
+css
+footer section div:nth-child(3) a:nth-child(4) 
+
+More
+xpath
+//h5[contains(text(),"More")]
+css
+footer section div:nth-child(4) h5:nth-child(1) 
+
+Blog
+xpath
+//section//div//a[contains(text(),"Blog")]
+//section//div//a[contains(text(),"Blog") and @href]
+css
+footer section div:nth-child(4) a:nth-child(2) 
+
+GitHub
+xpath
+//section//div//a[contains(text(),"GitHub")]
+//section//div//a[contains(text(),"GitHub") and @href]
+css
+footer section div:nth-child(4) a:nth-child(3) 
