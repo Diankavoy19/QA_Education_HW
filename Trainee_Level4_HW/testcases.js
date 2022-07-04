@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 describe.only('testcases', () => {
-    xit('SignIn to GitHub with not valid credentials', async () => {
+    it('SignIn to GitHub with not valid credentials', async () => {
         await browser.url('https://github.com/');
 
         const SignInButton = await $('[href="/login"]')
@@ -21,7 +21,7 @@ describe.only('testcases', () => {
         await LoginButton.click()
         await browser.pause(5000);
     });
-    xit('Testcase1', async () => {
+    it('Testcase1', async () => {
         await browser.url('https://github.com/');
         const gitHubLink = await $('a[href="https://www.githubstatus.com/"]');
         await browser.pause(4000);
@@ -44,7 +44,7 @@ describe.only('testcases', () => {
         await TwButton.click()
         await browser.pause(1000);
     });
-    xit('Testcase2', async () => {
+    it('Testcase2', async () => {
         await browser.url('https://github.com/');
         const ContactButton = await $('a[href="https://support.github.com?tags=dotcom-footer"]');
         await browser.pause(4000);
@@ -56,7 +56,7 @@ describe.only('testcases', () => {
         await browser.keys(['Enter'])
         await browser.pause(3000);
     })
-    xit('Testcase3', async () => {
+    it('Testcase3', async () => {
         await browser.url('https://github.com/');
         const MButton = await $('//*[contains(text()," Why GitHub")]');
         await browser.pause(4000);
@@ -69,7 +69,7 @@ describe.only('testcases', () => {
         await browser.saveScreenshot('Testcase3Screenshot.png');
         await browser.pause(4000);
     })
-    xit('Testcase4', async () => {
+    it('Testcase4', async () => {
         await browser.url('https://github.com/');
         const TextElement = await $('[class="form-control border-0 f4-mktg py-3 px-4 width-full"]');
         await TextElement.setValue('Testcase4');
@@ -86,7 +86,7 @@ describe.only('testcases', () => {
         await browser.saveScreenshot('Testcase4Screenshot.png');
         await browser.pause(4000);
     })
-    xit('Testcase5', async () => {
+    it('Testcase5', async () => {
         await browser.url('https://github.com/');
         await browser.pause(4000);
         browser.setWindowSize(285, 356)
