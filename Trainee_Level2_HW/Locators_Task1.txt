@@ -1,6 +1,3 @@
-Locators
-Task 1
-
 Introduction 
 xpath
 //h3[contains(text(),'Introduction') ]
