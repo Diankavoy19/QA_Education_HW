@@ -2,202 +2,181 @@ Locators
 Task 1
 
 Introduction 
-
+xpath
 //h3[contains(text(),'Introduction') ]
 //h3[text()="Introduction"]
 //h3[contains(text(),'Introduction') and @class]
+css
+div.navGroups div:nth-child(1) h3
 
 API Docs
-
+xpath
 //a[text()="API Docs"]
 //a[contains(text(),'API Docs')]
 //a[contains(text(),'API Docs') and @class]
+css
+div.navGroups div:nth-child(1) ul li a
 
 Protocols
-
+xpath
 //h3[text()="Protocols"]
 //h3[contains(text(),'Protocols')]
 //h3[contains(text(),'Protocols') and @class]
+css
+div.navGroups div:nth-child(2) h3
 
 Webdriver Protocol
-
+xpath
 //a[text()="Webdriver Protocol"]
 //a[contains(text(),'Webdriver Protocol') ]
-//a[contains(text(),'Webdriver Protocol') and @class ]
-li a[href*="webdriver.html"] 
+//a[contains(text(),'Webdriver Protocol') and @class ] 
 //a[contains(text(),'JSON Wire Protocol') and @href and @class ]/../..//a
 //a[contains(text(),'Mobile JSON Wire Protocol') and @href and @class ]/../..//a
+css
+li a[href*="webdriver.html"]
+div.navGroups div:nth-child(2) ul li:nth-child(1) a
 
 Appium
-
-li a[href*="appium.html"]
+xpath
 //li//a[text()="Appium"]
 [href="/docs/api/appium.html"]
-a[href="/docs/api/appium.html"]
-li a[href="/docs/api/appium.html"]
 //*[contains(text(),'Appium') and @href and @class]
 //a[contains(text(),'Appium') and @href and @class ]
+css
+li a[href*="appium.html"]
+a[href="/docs/api/appium.html"]
+li a[href="/docs/api/appium.html"]
+div.navGroups div:nth-child(2) ul li:nth-child(2) a
 
 JSON Wire Protocol
-
+xpath
 //a[text()="JSON Wire Protocol"]
+css
 li a[href="/docs/api/jsonwp.html"]
+div.navGroups div:nth-child(2) ul li:nth-child(3) a
 
 Mobile JSON Wire Protocol
-
+xpath
 //a[text()="Mobile JSON Wire Protocol"]
 [href="/docs/api/mjsonwp.html"]
+css
 a[href="/docs/api/mjsonwp.html"]
 li a[href="/docs/api/mjsonwp.html"]
+div.navGroups div:nth-child(2) ul li:nth-child(4) a
 
 Chromium
-
+xpath
 //a[text()="Chromium"] 
-li a[href="/docs/api/chromium.html"] 
 //*[contains(text(),"Chromium")]
 //a[contains(text(),"Chromium")]
 //a[contains(text(),"Chromium") and @href and @class]
+css
+li a[href="/docs/api/chromium.html"] 
+div.navGroups div:nth-child(2) ul li:nth-child(5) a
 
 Sauce Labs
-
+xpath
 //a[text()="Sauce Labs"]
-[href="/docs/api/saucelabs.html"]
-a[href="/docs/api/saucelabs.html"]
-li a[href="/docs/api/saucelabs.html"]
-a[href*="saucelabs.html"]
 //a[contains(text(),"Sauce Labs") ]
 //a[contains(text(),"Sauce Labs") and @href and @class]
+css
+a[href*="saucelabs.html"]
+a[href="/docs/api/saucelabs.html"]
+li a[href="/docs/api/saucelabs.html"]
+div.navGroups div:nth-child(2) ul li:nth-child(6) a
 
 Selenium Standalone
-
+xpath
 //a[contains(text(),"Selenium Standalone") ]
 //a[text()="Selenium Standalone"]
 //a[contains(text(),"Selenium Standalone") and @class and @href]
-[href="/docs/api/selenium.html"]
+css
 a[href="/docs/api/selenium.html"]
 li a[href="/docs/api/selenium.html"]
 a[href*="selenium.html"]
+div.navGroups div:nth-child(2) ul li:nth-child(7) a
 
 Appium
-
+xpath
+//p//a[text()="Appium"]
+//p//a[contains(text(),"Appium") ]
+css
 p a[href*="appium"]
 a[href="http://appium.io"]
 p a[href="http://appium.io"]
-[href="http://appium.io"]
-//p//a[text()="Appium"]
-//p//a[contains(text(),"Appium") ]
+
 
 v4.webdriver.io
-
+xpath
+//a[text()="v4.webdriver.io"]
+//a[contains(text(),"v4.webdriver.io")]
+//a[contains(text(),"v4.webdriver.io") and @href]
+css
 p a[href*="v4.webdriver.io"]
 a[href*="v4.webdriver.io"]
 [href*="v4.webdriver.io"]
 [href="http://v4.webdriver.io"]
-//a[text()="v4.webdriver.io"]
-//a[contains(text(),"v4.webdriver.io")]
-//a[contains(text(),"v4.webdriver.io") and @href]
+div.post article div span blockquote p:nth-child(1) a:nth-child(2)
 
 Guide
-
-li a[href="/docs/gettingstarted.html"]
-li a[href*="gettingstarted.html"]
+xpath
 //a[text()="Guide"]
 //a[contains(text(),"Guide")]
 //a[contains(text(),"Guide") and @href and @target]
 //a[contains(text(),"Guide") and @href or @targe]
+css
+li a[href="/docs/gettingstarted.html"]
+li a[href*="gettingstarted.html"]
+div.fixedHeaderContainer div header div nav ul li:nth-child(1)  
 
 Help
-
+xpath
 //a[contains(text(),"Help") and @href and @target]
 //li//a[contains(text(),"Help")]
 //li//a[text()="Help"]
+css
 li a[href="/help.html"]
 li a[href*="help.html"]
+div.fixedHeaderContainer div header div nav ul li:nth-child(3) 
 
 Blog
-
-a[href="/blog/"]
-li a[href="/blog/"]
-li a[href*="/blog/"]
+xpath
 //li//a[text()="Blog"]
 //li//a[contains(text(),"Blog")]
 //a[contains(text(),"Blog") and @target and @href]
+css
+a[href="/blog/"]
+li a[href="/blog/"]
+li a[href*="/blog/"]
+div.fixedHeaderContainer div header div nav ul li:nth-child(4)
 
 Edit
-
-[href="https://github.com/webdriverio/webdriverio/edit/master/docs/API.md"]
-a[href="https://github.com/webdriverio/webdriverio/edit/master/docs/API.md"]
-a[href*="API.md"]
+xpath
 //a[text()="Edit"]
 //a[contains(text(),"Edit")]
 //a[contains(text(),"Edit") and @class and @href and @target and @rel]
 //h1[contains(text(),"API Docs")]/..//a
+css
+[href="https://github.com/webdriverio/webdriverio/edit/master/docs/API.md"]
+a[href="https://github.com/webdriverio/webdriverio/edit/master/docs/API.md"]
+a[href*="API.md"]
+header.postHeader a
+
 
 Contribute
-
-li a[href="#contribute"]
+xpath
 //a[text()="Contribute"]
 //li//a[text()="Contribute"]
-li a[href*="contribute"]
 //a[contains(text(),"Contribute")]
 //a[contains(text(),"Contribute") and @class]
+css
+li a[href="#contribute"]
+li a[href*="contribute"]
+nav.onPageNav ul li:nth-child(2) a
 
 Text after Examples
-
+xpath
 //p[contains(text(),"Each command documentation usually comes with an example that demonstrates its usage in WebdriverIO's testrunner (in sync mode).")]
 //p[text()="Each command documentation usually comes with an example that demonstrates its usage in WebdriverIO's testrunner (in sync mode)."]
-
-Task 2
-
-Docs
-
-//h5[contains(text(),"Docs")]
-
-Getting Started
-
-//a[contains(text(),"Getting Started")]
-//a[contains(text(),"Getting Started") and @href or @hre]
-
-API Reference
-
-//a[contains(text(),"API Reference") and @href or @hre]
-//a[contains(text(),"API Reference")]
-
-Help
-
-//section //div//a[contains(text(),"Help") and @href ]
-
-Community
-
-//h5[contains(text(),"Community")]
-
-Stack Overflow
-
-//a[contains(text(),"Stack Overflow")]
-//a[contains(text(),"Stack Overflow") and @href or @targe and @rel]
-
-Support Chat
-
-//a[contains(text(),"Support Chat")]
-//a[contains(text(),"Support Chat") and @href or @targe or @re and @rel]
-
-Twitter
-
-//a[contains(text(),"Twitter")]
-//a[contains(text(),"Twitter") and @href and @target="_blank" or @re]
-
-More
-
-//h5[contains(text(),"More")]
-
-Blog
-
-//section//div//a[contains(text(),"Blog")]
-//section//div//a[contains(text(),"Blog") and @href]
-
-GitHub
-
-//section//div//a[contains(text(),"GitHub")]
-//section//div//a[contains(text(),"GitHub") and @href]
-
-
+css
+div.navPusher span:nth-child(1) p:nth-child(4)
