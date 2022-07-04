@@ -1,6 +1,6 @@
 const assert = require('assert')
 
-describe.only('testcases', () => {
+describe('testcases', () => {
     it.skip('SignIn to GitHub with not valid credentials', async () => {
         await browser.url('https://github.com/');
 
