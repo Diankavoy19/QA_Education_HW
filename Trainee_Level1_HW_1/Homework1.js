@@ -3,23 +3,23 @@ const HeaderTitle = '.postHeaderTitle';
 const JSONWireProtocol = '//*[text()="JSONWire protocol"]';
 const SearchInput = '#search_input_react';
 describe('Check webdriverio methods', () => {
-    xit('Task 1: should go to the page', async () => {
+    it('Task 1: should go to the page', async () => {
         await browser.url('https://v5.webdriver.io');
     });
-    xit('Task 2 and 3: should demonstrate the click command and display url of page "API" in the console', async() => {
+    it('Task 2 and 3: should demonstrate the click command and display url of page "API" in the console', async() => {
         await browser.url('https://v5.webdriver.io');
         await $(apiButton).click();
         console.log("Address of page 'API': " + await browser.getUrl());
     });
-    xit('Task 4:  display Header Title of page in the console', async() => {
+    it('Task 4:  display Header Title of page in the console', async() => {
         await browser.url('https://v5.webdriver.io/docs/api.html');
         console.log("Header Title is " + await $(HeaderTitle).getText())
     });
-    xit('Task 5:  display attribute of href element in the console', async() => {
+    it('Task 5:  display attribute of href element in the console', async() => {
         await browser.url('https://v5.webdriver.io/docs/api.html');
         console.log("Attribute of href element is " + await $(JSONWireProtocol).getAttribute('href'));
     });
-    xit('Task 6,7,8: print "text is" in SearchInput + add "DONE!" and add pause on 5 minutes ', async function () {
+    it('Task 6,7,8: print "text is" in SearchInput + add "DONE!" and add pause on 5 minutes ', async function () {
         await browser.url('https://v5.webdriver.io');
         await $(SearchInput).setValue('test is ');
         await browser.pause(2000);
