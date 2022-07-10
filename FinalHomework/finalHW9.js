@@ -1,8 +1,6 @@
-const assert = require('assert');
-const PageObj1 = require('../pageobjects/PageObject1.page.js');
-const randGenerate = require('./randGenerate');
-
-describe('Task of HW', () => {
+const PageObj1 = require('../../pageobjects/PageObjectForPlans.page.js');
+const randGenerate = require('../randGenerate');
+describe('Fake registration of GitHub Plans', () => {
     xit.only('Load a Main Page', async () => {
         await browser.url('https://github.com/');
         await browser.setWindowSize(1510, 900);
@@ -46,42 +44,40 @@ describe('Task of HW', () => {
         var username = await randGenerate.makeid(6);
         console.log("Generate username :" + username);
         await PageObj1.setNameofEnterpriceServer(username);
-        await browser.pause(1000);
+        await browser.pause(2000);
         var company = await randGenerate.makeid(6);
         console.log("Generate Company :" + company);
         await PageObj1.setCompanyofEnterpriceServer(company);
-        await browser.pause(1000);
+        await browser.pause(2000);
         var email = await randGenerate.getEmail();
         console.log("Generate email :" + email);
         await PageObj1.setWorkEmailofEnterpriceServer(email);
-        await browser.pause(1000);
+        await browser.pause(2000);
         var phone = await randGenerate.makePhone(10);
         console.log("GeneratePhone :" + phone);
         await PageObj1.setPhoneofEnterpriceServer(phone);
-        await browser.pause(1000);
+        await browser.pause(2000);
     });
     xit.only('Click to Checkbox', async () => {
-        await PageObj1.clickESButton();
+        await PageObj1.clickEnterpriceServerButton();
         await browser.pause(2000);
-        await PageObj1.clickESButton1();
+        await PageObj1.clickEnterpriceServerButton1();
         await browser.pause(2000);
     });
     xit.only('move to Checkbox', async () => {
-        await PageObj1.ESButton1.scrollIntoView();
+        await PageObj1.EnterpriceServerButton1.scrollIntoView();
         await browser.pause(3000);
     });
     xit.only('Click to Checkbox', async () => {
-        await PageObj1.clickESButton1();
+        await PageObj1.clickEnterpriceServerButton1();
         await browser.pause(2000);
     });
     xit.only('Enter textarea', async () => {
         await PageObj1.setTextarea('Testcase is done!');
-        await browser.pause(1000);
+        await browser.pause(2000);
     });
     xit.only('Click to Checkbox', async () => {
         await PageObj1.clickLastCheckbox();
         await browser.pause(2000);
     });
-
-
-})
+});

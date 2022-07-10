@@ -1,12 +1,10 @@
-const assert = require('assert');
-const PageObj1 = require('../pageobjects/PageObject1.page.js');
-
-describe('Load login page ', async() => {
-    xit.only(' Load page', async () => {
+const PageObj1 = require('../../pageobjects/PageObjectforAuthorization.page.js');
+const SearchInput = 'div.with-autocomplete__content div input';
+describe('fake authorization', async() => {
+    xit.only(' Load the page', async () => {
         await browser.setWindowSize(1510, 900);
         await browser.url('https://stepik.org/catalog?auth=login');
-        
-    })
+    });
     xit.only('enter email', async() => {
         await PageObj1.setEmailSign('didiboo19@gmail.com');
         await browser.pause(1000);
@@ -16,19 +14,19 @@ describe('Load login page ', async() => {
         await browser.pause(1000);
       });
     xit.only('should defect if email is displayed', async() => {
-        let isDisplayed1 = await PageObj1.EmailSign.isDisplayed();
-        console.log("IS DISPLAYED EMAIL?:" + isDisplayed1);
-    });
+        let isDisplayedEmail = await PageObj1.EmailSign.isDisplayed();
+        console.log("IS DISPLAYED EMAIL?:" + isDisplayedEmail);
+      });
     xit.only('should defect if password is displayed', async() => {
-      let isDisplayed2 = await PageObj1.PasswordSign.isDisplayed();
-      console.log("IS DISPLAYED PASSWORD?:" + isDisplayed2);
-    });
-      it.only('should defect if an element is displayed', async() => {
-        let isDisplayed3 = await PageObj1.SubButton.isDisplayed();
-        console.log("IS DISPLAYED ELEMENT?:" + isDisplayed3);
+      let isDisplayedPassword = await PageObj1.PasswordSign.isDisplayed();
+      console.log("IS DISPLAYED PASSWORD?:" + isDisplayedPassword);
+      });
+    xit.only('should defect if an element is displayed', async() => {
+        let isDisplayedSubmitButton = await PageObj1.SubmitButton.isDisplayed();
+        console.log("IS DISPLAYED ELEMENT?:" + isDisplayedSubmitButton);
       });
     xit.only('click to Submit button', async() => {
-        await PageObj1.clickSubButton();
+        await PageObj1.clickSubmitButton();
         await browser.pause(2000);
       });
     xit.only('chek url', async() => {
@@ -36,8 +34,7 @@ describe('Load login page ', async() => {
         console.log('URL=' + await browser.getUrl());
       });
     xit.only('should defect if an element is displayed', async() => {
-          const Search = await $('[class="button_with-loader search-form__submit"]')
-          let isDisplayed4 = await Search.isDisplayed();
-          console.log("IS DISPLAYED SEARCH?:" + isDisplayed4);
+          let isDisplayedSearch = await $(SearchInput).isDisplayed();
+          console.log("IS DISPLAYED SEARCH INPUT?:" + isDisplayedSearch);
       });
-})
+});

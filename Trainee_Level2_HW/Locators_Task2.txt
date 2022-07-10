@@ -1,73 +1,75 @@
 Docs
 xpath
 //h5[contains(text(),"Docs")]
-//footer//div//h5[contains(text(),'Docs')]
+//footer//div[1]//h5
 css
 footer section div:nth-child(2) h5:nth-child(1) 
 
 Getting Started
 xpath
 //a[contains(text(),"Getting Started")]
-//a[contains(text(),"Getting Started") and @href or @hre]
+//footer//div[1]//a[1]
 css
 footer section div:nth-child(2) a:nth-child(2) 
 
 API Reference
 xpath
-//a[contains(text(),"API Reference") and @href or @hre]
 //a[contains(text(),"API Reference")]
+//footer//div[1]//a[2]
 css
 footer section div:nth-child(2) a:nth-child(3) 
 
 Help
 xpath
-//section //div//a[contains(text(),"Help") and @href ]
+//footer//div[1]//a[3]
 css
 footer section div:nth-child(2) a:nth-child(4) 
 
 Community
 xpath
 //h5[contains(text(),"Community")]
+//footer//div[2]//h5
 css
 footer section div:nth-child(3) h5:nth-child(1) 
 
 Stack Overflow
 xpath
 //a[contains(text(),"Stack Overflow")]
-//a[contains(text(),"Stack Overflow") and @href or @targe and @rel]
+//footer//div[2]//a[1]
 css
 footer section div:nth-child(3) a:nth-child(2) 
 
 Support Chat
 xpath
 //a[contains(text(),"Support Chat")]
-//a[contains(text(),"Support Chat") and @href or @targe or @re and @rel]
+//footer//div[2]//a[2]
 css
 footer section div:nth-child(3) a:nth-child(3) 
 
 Twitter
 xpath
 //a[contains(text(),"Twitter")]
-//a[contains(text(),"Twitter") and @href and @target="_blank" or @re]
+//footer//div[2]//a[3]
 css
 footer section div:nth-child(3) a:nth-child(4) 
 
 More
 xpath
 //h5[contains(text(),"More")]
+//footer//div[3]//h5
 css
 footer section div:nth-child(4) h5:nth-child(1) 
 
 Blog
 xpath
 //section//div//a[contains(text(),"Blog")]
-//section//div//a[contains(text(),"Blog") and @href]
+//footer//div[3]//a[1]
 css
 footer section div:nth-child(4) a:nth-child(2) 
 
 GitHub
 xpath
 //section//div//a[contains(text(),"GitHub")]
-//section//div//a[contains(text(),"GitHub") and @href]
+//footer//div[3]//a[2]
 css
 footer section div:nth-child(4) a:nth-child(3) 

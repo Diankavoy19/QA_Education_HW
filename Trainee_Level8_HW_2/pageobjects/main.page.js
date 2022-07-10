@@ -1,11 +1,9 @@
 class MainPage {
     get searchInput() {
-        return $('#search_input_react')
-    }
-
+        return $('#search_input_react');
+    };
     setUserName (value) {
-        this.searchInput.addValue(value)
-    }
-}
-
-module.exports = new MainPage()
+        this.searchInput.addValue(value);
+    };
+};
+module.exports = new MainPage();

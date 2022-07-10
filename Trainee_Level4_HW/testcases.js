@@ -1,107 +1,98 @@
-const assert = require('assert')
-
-describe('testcases', () => {
-    it.skip('SignIn to GitHub with not valid credentials', async () => {
+const LoginButton = '[href="/login"]';
+const UsernameField = '[id="login_field"]';
+const PasswordField = '[id="password"]';
+const SignInButton = 'div:nth-Child(5) div input[value="Sign in"]';
+const gitHubStatusLink = 'a[href*="githubstatus"]';
+const TwitterButtonofStatus = 'div>div>div>nav:nth-Child(3)>a:nth-Child(2)';
+const TwitterButtonSignIn = 'div a[data-testid="login"]';
+const InputOfTwitterOfSignIn = '//label//div//div[2]//div//input';
+const ButtonNextInTwitterLogin = '//*[@role="group"]//*[@role="button"][2]';
+const ContactGitHubButton = 'a[href="https://support.github.com?tags=dotcom-footer"]';
+const HelpInputonContactGitHubPage = '//form[@id="search-form"]//*[@type="text"]';
+const ProductButton = '//header//div//div[2]//nav//ul//li[1]//details[1]//summary';
+const IntegrationstButton = 'a[href$="integrations"]';
+const EmailInputonTheMainPageofGitHub = '//*[@type="email"]';
+const GoogleButton = '//*[@role="combobox"]';
+const SearchInput = '[data-scoped-placeholder="Search"]';
+describe.only('testcases', () => {
+    xit('SignIn to GitHub with not valid credentials', async () => {
         await browser.url('https://github.com/');
-
-        const SignInButton = await $('[href="/login"]')
         await browser.pause(2000);
-        await SignInButton.click()
+        await $(LoginButton).click();
         await browser.pause(2000);
-
-        const elem = await $('[id="login_field"]')
-        await elem.setValue('');
+        await $(UsernameField).setValue('');
         await browser.pause(2000);
-        const password = await $('[id="password"]')
-        await password.setValue('');
+        await $(PasswordField).setValue('');
         await browser.pause(2000);
-        
-        const LoginButton = await $('input[class="btn btn-primary btn-block js-sign-in-button"]')
         await browser.pause(2000);
-        await LoginButton.click()
+        await $(SignInButton).click();
         await browser.pause(5000);
     });
-    it.skip('Testcase1', async () => {
+    xit('Testcase1: Scroll to the Status Link and click, then go to the Twitter Link and Sign In there ', async () => {
         await browser.url('https://github.com/');
-        const gitHubLink = await $('a[href="https://www.githubstatus.com/"]');
         await browser.pause(4000);
-        await gitHubLink.scrollIntoView();
+        await $(gitHubStatusLink).scrollIntoView();
         await browser.pause(2000);
-        await gitHubLink.click()
-
-        const MainButton = await $('nav a[class="py-2 ml-3 ml-lg-4"]');
+        await $(gitHubStatusLink).click();
         await browser.pause(2000);
-        await MainButton.click()
-        const TwitterButton = await $('//*[contains(text(),"Войти")]')
+        await $(TwitterButtonofStatus).click();
         await browser.pause(2000);
-        await TwitterButton.click()
+        await $(TwitterButtonSignIn).click();
         await browser.pause(2000);
-
-        const elem1 = await $('[class="r-30o5oe r-1niwhzg r-17gur6a r-1yadl64 r-deolkf r-homxoj r-poiln3 r-7cikom r-1ny4l3l r-t60dpp r-1dz5y72 r-fdjqy7 r-13qz1uu"]')
-        await elem1.setValue('');
+        await $(InputOfTwitterOfSignIn).setValue('');
         await browser.pause(2000);
-        const TwButton = await $('[class="css-901oao r-1awozwy r-jwli3a r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0"]')
-        await TwButton.click()
+        await $(ButtonNextInTwitterLogin).click();
         await browser.pause(1000);
     });
-    it.skip('Testcase2', async () => {
+    xit('Testcase2: Scroll to the Contact GitHub Link and click, then print value in input on the page and to press "Enter"', async () => {
         await browser.url('https://github.com/');
-        const ContactButton = await $('a[href="https://support.github.com?tags=dotcom-footer"]');
         await browser.pause(4000);
-        await ContactButton.scrollIntoView();
+        await $(ContactGitHubButton).scrollIntoView();
         await browser.pause(2000);
-        await ContactButton.click()
-        const FindButton = await $('[class="form-control form-control input-block subnav-search-input width-full"]');
-        await FindButton.setValue('iнформацiйнi системи');
+        await $(ContactGitHubButton).click();
+        await $(HelpInputonContactGitHubPage).setValue('iнформацiйнi системи');
         await browser.keys(['Enter'])
         await browser.pause(3000);
-    })
-    it.skip('Testcase3', async () => {
+    });
+    xit('Testcase3: move to Product button, click on the Integrations Button and take a screenshots', async () => {
         await browser.url('https://github.com/');
-        const MButton = await $('//*[contains(text()," Why GitHub")]');
         await browser.pause(4000);
-        await MButton.moveTo(16,16);
+        await $(ProductButton).moveTo(16,16);
         await browser.pause(4000);
-        const IntegrationstButton = await $('a[href="/features/integrations"]');
-        await browser.pause(4000);
-        await IntegrationstButton.click()
+        await $(IntegrationstButton).click();
         await browser.pause(4000);
         await browser.saveScreenshot('Testcase3Screenshot.png');
         await browser.pause(4000);
-    })
-    it.skip('Testcase4', async () => {
+    });
+    xit('Testcase4: set value in Email Input on the main page og GitHub, select text, copy and paste in the Google input on Google Search, then press "Enter" and take a sreenshot', async () => {
         await browser.url('https://github.com/');
-        const TextElement = await $('[class="form-control border-0 f4-mktg py-3 px-4 width-full"]');
-        await TextElement.setValue('Testcase4');
-        await TextElement.keys(['Control', 'a'])
+        await $(EmailInputonTheMainPageofGitHub).setValue('Testcase4');
         await browser.pause(2000);
-        await TextElement.keys(['Control', 'c'])
+        await $(EmailInputonTheMainPageofGitHub).keys(['Control', 'a']);
+        await browser.pause(2000);
+        await $(EmailInputonTheMainPageofGitHub).keys(['Control', 'c']);
         await browser.newWindow('https://www.google.com/');
         await browser.pause(2000);
-        const GoogleButton = await $('[class="gLFyf gsfi"]');
-        await GoogleButton.setValue( browser.keys(['Control', 'v']));
-        await browser.pause(2000);
-        await browser.keys(['Enter'])
+        await $(GoogleButton).setValue(browser.keys(['Control', 'v']));
+        await browser.keys(['Enter']);
         await browser.pause(3000);
         await browser.saveScreenshot('Testcase4Screenshot.png');
         await browser.pause(4000);
-    })
-    it.only('Testcase5', async () => {
+    });
+    xit('Testcase5: set window size is smaller and  bigger. set value in Search Input, select, delete and press "Enter" ', async () => {
         await browser.url('https://github.com/');
         await browser.pause(4000);
-        browser.setWindowSize(285, 356)
+        browser.setWindowSize(285, 356);
         await browser.pause(4000);
-        browser.setWindowSize(1460, 800)
+        browser.setWindowSize(1460, 800);
         await browser.pause(4000);
-        const SearchElement = await $('[class="form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus "]');
-        await SearchElement.setValue('Testcase5');
+        await $(SearchInput).setValue('Testcase5');
         await browser.pause(4000);
-        await SearchElement.keys(['Control', 'a'])
+        await $(SearchInput).keys(['Control', 'a']);
         await browser.pause(4000);
-        await SearchElement.keys(['Delete'])
+        await $(SearchInput).keys(['Delete']);
         await browser.pause(4000);
-        await SearchElement.keys(['Enter'])
+        await $(SearchInput).keys(['Enter']);
         await browser.pause(4000);
-    })
-
-})
+    });
+});

@@ -1,14 +1,12 @@
-const assert = require('assert');
-const PageObj1 = require('../pageobjects/PageObject1.page.js');
-const randGenerate = require('./randGenerate');
-
-describe('fake registration ', async() => {
+const PageObj1 = require('../../pageobjects/PageObjectforFakeRegistaration2.page');
+const randGenerate = require('../randGenerate');
+describe('fake registration on another site', async() => {
     xit.only(' Load page', async () => {
         await browser.setWindowSize(1510, 900);
         await browser.url('https://stepik.org/catalog?auth=registration');
         await browser.pause(1000);
     });
-    it.only('generate username ', async() => {
+    xit.only('generate username ', async() => {
         var username = await randGenerate.makeid(6);
         console.log("Generate username :" + username);
         await PageObj1.setUserName(username);
@@ -27,7 +25,7 @@ describe('fake registration ', async() => {
         await browser.pause(1000);
       });
     xit.only('click to Submit button', async() => {
-        await PageObj1.clickSubButton();
+        await PageObj1.clickSubmitButton();
         await browser.pause(2000);
         
       });
@@ -35,4 +33,4 @@ describe('fake registration ', async() => {
       console.log('URL=' + await browser.getUrl());
       await expect(browser).toHaveUrlContaining('auth=registration');
       });
-})
+});

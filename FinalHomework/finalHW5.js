@@ -1,41 +1,40 @@
-const assert = require('assert')
-const PageObj1 = require('../pageobjects/PageObject1.page.js');
-
-describe('testcases', () => {
+const PageObj2 = require('../../pageobjects/PageObjectforswitchbutton.page.js');
+describe('switch beetween button on the main page of github', () => {
     xit.only('Load Main Page', async () => {
         await browser.url('https://github.com/');
         await browser.setWindowSize(1510, 900);
         await browser.pause(2000);
-    })
+    });
     xit.only('Move To Product', async () => {
-        await PageObj1.ProductButton.moveTo(16,16);
+        await PageObj2.ProductButton.moveTo(16,16);
         await browser.pause(2000);
-        let isDisplayed1 = await PageObj1.ProductButton.isDisplayed();
-        console.log("IS DISPLAYED Product?:" + isDisplayed1);
+        await PageObj2.clickProductButton();
+        await browser.pause(2000);
+        let isDisplayedProductButton = await PageObj2.ProductButton.isDisplayed();
+        console.log("IS DISPLAYED Product Button?:" + isDisplayedProductButton);
     });
     xit.only('Move To Enterprice', async () => {
-        await PageObj1.EnterpriseButton.moveTo(16,16);
+        await PageObj2.EnterpriseButton.moveTo(16,16);
         await browser.pause(2000);
-        let isDisplayed2 = await PageObj1.EnterpriseButton.isDisplayed();
-        console.log("IS DISPLAYED Enterprice?:" + isDisplayed2);
+        let isDisplayedEnterpriceButton = await PageObj2.EnterpriseButton.isDisplayed();
+        console.log("IS DISPLAYED Enterprice Button?:" + isDisplayedEnterpriceButton);
     });
     xit.only('Move To Explore', async () => {
-        await PageObj1.ExploreButton.moveTo(16,16);
+        await PageObj2.ExploreButton.moveTo(16,16);
         await browser.pause(4000);
-        let isDisplayed3 = await PageObj1.ExploreButton.isDisplayed();
-        console.log("IS DISPLAYED Explore?:" + isDisplayed3);
+        let isDisplayedExploreButton = await PageObj2.ExploreButton.isDisplayed();
+        console.log("IS DISPLAYED Explore Button?:" + isDisplayedExploreButton);
     });
     xit.only('Move To Marketplace', async () => {
-        await PageObj1.MarketplaceButton.moveTo(16,16);
+        await PageObj2.MarketplaceButton.moveTo(16,16);
         await browser.pause(4000);
-        let isDisplayed4 = await PageObj1.MarketplaceButton.isDisplayed();
-        console.log("IS DISPLAYED Marketplace?:" + isDisplayed4);
+        let isDisplayedMarketplaceButton = await PageObj2.MarketplaceButton.isDisplayed();
+        console.log("IS DISPLAYED Marketplace Button?:" + isDisplayedMarketplaceButton);
     });
     xit.only('Move To Pricing', async () => {
-        await PageObj1.PricingButton.moveTo(16,16);
+        await PageObj2.PricingButton.moveTo(16,16);
         await browser.pause(4000);
-        let isDisplayed5 = await PageObj1.PricingButton.isDisplayed();
-        console.log("IS DISPLAYED Pricing?:" + isDisplayed5);
+        let isDisplayedPricingButton = await PageObj2.PricingButton.isDisplayed();
+        console.log("IS DISPLAYED Pricing Button?:" + isDisplayedPricingButton);
     });
-
-})
+});

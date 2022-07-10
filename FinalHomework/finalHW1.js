@@ -1,14 +1,11 @@
-const assert = require('assert');
-const PageObj = require('../pageobjects/PageObject.page.js');
-const randGenerate = require('./randGenerate');
-
+const PageObj = require('../../pageobjects/PageObjectforFakeRegistration.page.js');
+const randGenerate = require('../randGenerate');
 describe.only('fake registration ', async() => {
     xit.only(' Load page', async () => {
         await browser.setWindowSize(1510, 900);
         await browser.url('https://ru.coursera.org/signup?redirectTo=%2F');
         await browser.pause(1000);
-        
-    })
+    });
     xit.only('generate username ', async() => {
         var username = await randGenerate.makeid(6);
         console.log("Generate username :" + username);
@@ -28,12 +25,11 @@ describe.only('fake registration ', async() => {
         await browser.pause(1000);
       });
     xit.only('click to Submit button', async() => {
-        await PageObj.clickSubButton();
+        await PageObj.clickSubmitButton();
         await browser.pause(2000);
       });
     xit.only('chek url', async() => {
         console.log('URL=' + await browser.getUrl());
         expect(browser).toHaveUrlContaining('redirectTo');
         });
-
-})
+});

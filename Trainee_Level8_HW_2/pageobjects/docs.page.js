@@ -1,11 +1,9 @@
 class DocsPage {
     get editButton() {
-        return $('.slidingNav [href="/docs/gettingstarted.html"]')
-    }
-
+        return $('.slidingNav [href$="gettingstarted.html"]');
+    };
     clickEditButton () {
-        this.editButton.click()
-    }
-}
-
-module.exports = new DocsPage()
+        this.editButton.click();
+    };
+};
+module.exports = new DocsPage();

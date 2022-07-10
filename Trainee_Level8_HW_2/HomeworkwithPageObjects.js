@@ -1,13 +1,12 @@
-const assert = require('assert');
-const mainPage = require('../pageobjects/main.page.js');
-const docsPage = require('../pageobjects/docs.page.js');
-const APIPage = require('../pageobjects/api.page.js');
-const ContributePage = require('../pageobjects/contribute.page.js');
-const HelpPage = require('../pageobjects/help.page.js');
-const VersionPage = require('../pageobjects/version.page.js');
-const PastVersionPage = require('../pageobjects/pastversion.page.js');
-const DocumentationPage = require('../pageobjects/documentation.page.js');
-
+const mainPage = require('..//../pageobjects/main.page');
+const docsPage = require('..//../pageobjects/docs.page.js');
+const APIPage = require('..//../pageobjects/api.page.js');
+const ContributePage = require('..//../pageobjects/contribute.page.js');
+const HelpPage = require('..//../pageobjects/help.page.js');
+const VersionPage = require('..//../pageobjects/version.page.js');
+const PastVersionPage = require('..//../pageobjects/pastversion.page.js');
+const DocumentationPage = require('..//../pageobjects/documentation.page.js');
+const helpButton = "div.gridBlock div:first-Child div.blockContent h2 div span";
 describe('v6.webdriver.io page', async() => {
     xit('should demonstrate the addValue command', async() => {
         await browser.url('https://v6.webdriver.io/')
@@ -15,13 +14,11 @@ describe('v6.webdriver.io page', async() => {
         await browser.pause(2000);
         await mainPage.setUserName('type with method');
         await browser.pause(2000);
-        
-    })
+    });
     xit('should click Docs button', async() => {
         await docsPage.clickEditButton();
         await browser.pause(2000);
-        
-    })
+    });
     xit('should click  button (Homework)', async() => {
         await browser.url('https://v6.webdriver.io/')
         await browser.pause(2000);
@@ -31,8 +28,7 @@ describe('v6.webdriver.io page', async() => {
         await browser.pause(2000);
         await HelpPage.clickEditButton();
         await browser.pause(2000);
-        const helpButton = await $("//p[contains(text(),'Browse Docs') ]")
-        let isDisplayed = await helpButton.isDisplayed();
+        let isDisplayed = await $(helpButton).isDisplayed();
         console.log("IS DISPLAYED?:" + isDisplayed);
         await browser.pause(2000);
         await VersionPage.clickEditButton();
@@ -41,6 +37,5 @@ describe('v6.webdriver.io page', async() => {
         await browser.pause(2000);
         await DocumentationPage.clickEditButton();
         await browser.pause(2000);
-    })
-
-})
+    });
+});
