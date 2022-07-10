@@ -14,8 +14,8 @@ const IntegrationstButton = 'a[href$="integrations"]';
 const EmailInputonTheMainPageofGitHub = '//*[@type="email"]';
 const GoogleButton = '//*[@role="combobox"]';
 const SearchInput = '[data-scoped-placeholder="Search"]';
-describe.only('testcases', () => {
-    xit('SignIn to GitHub with not valid credentials', async () => {
+describe('testcases', () => {
+    it('SignIn to GitHub with not valid credentials', async () => {
         await browser.url('https://github.com/');
         await browser.pause(2000);
         await $(LoginButton).click();
@@ -28,7 +28,7 @@ describe.only('testcases', () => {
         await $(SignInButton).click();
         await browser.pause(5000);
     });
-    xit('Testcase1: Scroll to the Status Link and click, then go to the Twitter Link and Sign In there ', async () => {
+    it('Testcase1: Scroll to the Status Link and click, then go to the Twitter Link and Sign In there ', async () => {
         await browser.url('https://github.com/');
         await browser.pause(4000);
         await $(gitHubStatusLink).scrollIntoView();
@@ -44,7 +44,7 @@ describe.only('testcases', () => {
         await $(ButtonNextInTwitterLogin).click();
         await browser.pause(1000);
     });
-    xit('Testcase2: Scroll to the Contact GitHub Link and click, then print value in input on the page and to press "Enter"', async () => {
+    it('Testcase2: Scroll to the Contact GitHub Link and click, then print value in input on the page and to press "Enter"', async () => {
         await browser.url('https://github.com/');
         await browser.pause(4000);
         await $(ContactGitHubButton).scrollIntoView();
@@ -54,7 +54,7 @@ describe.only('testcases', () => {
         await browser.keys(['Enter'])
         await browser.pause(3000);
     });
-    xit('Testcase3: move to Product button, click on the Integrations Button and take a screenshots', async () => {
+    it('Testcase3: move to Product button, click on the Integrations Button and take a screenshots', async () => {
         await browser.url('https://github.com/');
         await browser.pause(4000);
         await $(ProductButton).moveTo(16,16);
@@ -64,7 +64,7 @@ describe.only('testcases', () => {
         await browser.saveScreenshot('Testcase3Screenshot.png');
         await browser.pause(4000);
     });
-    xit('Testcase4: set value in Email Input on the main page og GitHub, select text, copy and paste in the Google input on Google Search, then press "Enter" and take a sreenshot', async () => {
+    it('Testcase4: set value in Email Input on the main page og GitHub, select text, copy and paste in the Google input on Google Search, then press "Enter" and take a sreenshot', async () => {
         await browser.url('https://github.com/');
         await $(EmailInputonTheMainPageofGitHub).setValue('Testcase4');
         await browser.pause(2000);
@@ -79,7 +79,7 @@ describe.only('testcases', () => {
         await browser.saveScreenshot('Testcase4Screenshot.png');
         await browser.pause(4000);
     });
-    xit('Testcase5: set window size is smaller and  bigger. set value in Search Input, select, delete and press "Enter" ', async () => {
+    it('Testcase5: set window size is smaller and  bigger. set value in Search Input, select, delete and press "Enter" ', async () => {
         await browser.url('https://github.com/');
         await browser.pause(4000);
         browser.setWindowSize(285, 356);
