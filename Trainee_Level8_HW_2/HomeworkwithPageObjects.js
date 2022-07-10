@@ -8,18 +8,18 @@ const PastVersionPage = require('..//../pageobjects/pastversion.page.js');
 const DocumentationPage = require('..//../pageobjects/documentation.page.js');
 const helpButton = "div.gridBlock div:first-Child div.blockContent h2 div span";
 describe('v6.webdriver.io page', async() => {
-    xit('should demonstrate the addValue command', async() => {
+    it('should demonstrate the addValue command', async() => {
         await browser.url('https://v6.webdriver.io/')
         await mainPage.searchInput.addValue('test');
         await browser.pause(2000);
         await mainPage.setUserName('type with method');
         await browser.pause(2000);
     });
-    xit('should click Docs button', async() => {
+    it('should click Docs button', async() => {
         await docsPage.clickEditButton();
         await browser.pause(2000);
     });
-    xit('should click  button (Homework)', async() => {
+    it('should click  button (Homework)', async() => {
         await browser.url('https://v6.webdriver.io/')
         await browser.pause(2000);
         await APIPage.clickEditButton();
