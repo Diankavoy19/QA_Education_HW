@@ -1,5 +1,5 @@
 # QA_Education_HW
-### Description
+## Description
 Homework for online training of autotests using <a href="https://webdriver.io">WebdriverIO</a> <br>
 Link to tutorials on [youtube]( https://www.youtube.com/watch?v=cSQxQpIlVgo&list=PLP1-M5OhC7yjAZ1-llDH45nxLfKKbcxGe&index=3)
 ###Usage
