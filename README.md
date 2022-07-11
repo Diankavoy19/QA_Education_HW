@@ -10,7 +10,8 @@ and install all the dependencies for doing the full operation of the node.js.
 
 Also, to create, support project with WebdriverIO CLI,that provides to install dependencies in your project, we need to run setup command [getting-started](https://v5.webdriver.io/docs/gettingstarted.html).
 
-Download git repository and use install node modules/
+Download git repository and use install node modules.
+
 After that we can run all our tests.
 ```console
 npx wdio run ./wdio.conf.js
