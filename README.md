@@ -10,22 +10,14 @@ and install all the dependencies for doing the full operation of the node.js.
 
 Also, to create, support project with WebdriverIO CLI,that provides to install dependencies in your project, we need to run setup command [getting-started](https://v5.webdriver.io/docs/gettingstarted.html).
 
-Check WebdriverIO CLI is installed
-```console
-npx wdio --version
-```
-Download the project from the [repository](https://github.com/Diankavoy19/QA_Education_HW),open the project folder in the console
-and run commands "npm i --save-dev @wdio/cli" and "./node_modules/.bin/wdio config -y"in console. Wait until all modules are installed.
-```console
-npm i --save-dev @wdio/cli
-```
-```console
-./node_modules/.bin/wdio config -y
-```
-After that we can run our tests.
-
+Download git repository and use install node modules/
+After that we can run all our tests.
 ```console
 npx wdio run ./wdio.conf.js
+```
+We can run only one test, example "Homework1".
+```console
+npm  run homework1
 ```
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--co5LdVu9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i2.wp.com/grantnorwood.com/app/uploads/2017/07/webdriver-io-logo.png%3Fw%3D1680%26ssl%3D1)
 

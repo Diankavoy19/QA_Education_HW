@@ -1,24 +1,25 @@
-const PageObj1 = require('../../pageobjects/PageObjectForPlans.page.js');
-const randGenerate = require('../randGenerate');
+const PageObj1 = require('./pageobjects/PageObjectForPlans.page');
+const randGenerate = require("./pageobjects/randGenerate");
+
 describe('Fake registration of GitHub Plans', () => {
-    it.only('Load a Main Page', async () => {
+    it('Load a Main Page', async () => {
         await browser.url('https://github.com/');
         await browser.setWindowSize(1510, 900);
         await browser.pause(2000);
     });
-    it.only('move to Start a Free Trial Button', async () => {
+    it('move to Start a Free Trial Button', async () => {
         await PageObj1.StartFreeTrialButtonofthemainPage.scrollIntoView();
         await browser.pause(3000);
     });
-    it.only('Click to Start a Free Trial Button', async () => {
+    it('Click to Start a Free Trial Button', async () => {
         await PageObj1.clickStartFreeTrialButtonofthemainPage();
         await browser.pause(2000);
     });
-    it.only('Click to Enterprise Cloud Button', async () => {
+    it('Click to Enterprise Cloud Button', async () => {
         await PageObj1.clickEnterpriseCloudlButton();
         await browser.pause(2000);
     });
-    it.only('Enter data', async () => {
+    it('Enter data', async () => {
         var username = await randGenerate.makeid(6);
         console.log("Generate username :" + username);
         await PageObj1.setUserNameofEnterpriceCloud(username);
@@ -32,15 +33,15 @@ describe('Fake registration of GitHub Plans', () => {
         await PageObj1.setPasswordofEnterpriceCloud(password);
         await browser.pause(1000);
     });
-    it.only('Back to the previous page', async () => {
+    it('Back to the previous page', async () => {
         await browser.back();
         await browser.pause(3000);
     });
-    it.only('Click to Enterprise Server Button', async () => {
+    it('Click to Enterprise Server Button', async () => {
         await PageObj1.clickEnterpriseServerlButton();
         await browser.pause(2000);
     });
-    it.only('Enter data', async () => {
+    it('Enter data', async () => {
         var username = await randGenerate.makeid(6);
         console.log("Generate username :" + username);
         await PageObj1.setNameofEnterpriceServer(username);
@@ -58,25 +59,25 @@ describe('Fake registration of GitHub Plans', () => {
         await PageObj1.setPhoneofEnterpriceServer(phone);
         await browser.pause(2000);
     });
-    it.only('Click to Checkbox', async () => {
+    it('Click to Checkbox', async () => {
         await PageObj1.clickEnterpriceServerButton();
         await browser.pause(2000);
         await PageObj1.clickEnterpriceServerButton1();
         await browser.pause(2000);
     });
-    it.only('move to Checkbox', async () => {
+    it('move to Checkbox', async () => {
         await PageObj1.EnterpriceServerButton1.scrollIntoView();
         await browser.pause(3000);
     });
-    it.only('Click to Checkbox', async () => {
+    it('Click to Checkbox', async () => {
         await PageObj1.clickEnterpriceServerButton1();
         await browser.pause(2000);
     });
-    it.only('Enter textarea', async () => {
+    it('Enter textarea', async () => {
         await PageObj1.setTextarea('Testcase is done!');
         await browser.pause(2000);
     });
-    it.only('Click to Checkbox', async () => {
+    it('Click to Checkbox', async () => {
         await PageObj1.clickLastCheckbox();
         await browser.pause(2000);
     });
